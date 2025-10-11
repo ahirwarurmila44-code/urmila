@@ -18,3 +18,13 @@ $a == $b;
 //  ===   compare variables value and types
 
 $a === $b;  //false
+
+
+
+20. require vs autoloader
+
+require → manually includes files.
+
+autoloader → automatically loads classes.
+
+spl_autoload_register(function($class){ require $class.'.php'; });
