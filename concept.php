@@ -1,30 +1,21 @@
 <?php
 
-//Difference B/W = and == and ===
-
-$a = 5;  $b = 5;
-
-// Assignment operator
-// =   used to assign a value to a variable.
-
-$x = 4; $y = "kldsfj";
-
-// Equality operator
-// ==   compare varibles value;
-
-$a == $b;
-
-// Identity operator 
-//  ===   compare variables value and types
-
-$a === $b;  //false
+// important tags for all videos
+//  php, php tutorial, php shorts, php for beginners, php programming, web development, php interview, php session, php login, php vs javascript, php oops, php projects, php database
 
 
+// Session in PHP
 
-20. require vs autoloader
+// Superglobal
 
-require → manually includes files.
+/* Session stores temporary user data on the server-side, making it accessible
+ on different pages visited by the same user during a single browsing session  */
 
-autoloader → automatically loads classes.
+// Data stored in $_SESSION persists until session ends.
 
-spl_autoload_register(function($class){ require $class.'.php'; });
+session_start();
+$_SESSION['user'] = "Coder";
+echo $_SESSION['user'];
+
+
+?>

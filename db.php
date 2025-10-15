@@ -1,12 +1,5 @@
 <?php
 
-// $servername = "localhost";  // Usually "localhost"
-// $username = "root";         // Your MySQL username
-// $password = "";             // Your MySQL password
-// $database = "youtube_tutorials";      // Your database name
-// $port = 3307;               // Default MySQL port 3306
-
-
 $conn = mysqli_connect('localhost','root','','youtube_tutorials', 3307);
 if(!$conn){
     echo " MySQL Connection Failed". mysqli_connect_error();
