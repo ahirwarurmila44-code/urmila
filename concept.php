@@ -13,9 +13,15 @@
 
 // Data stored in $_SESSION persists until session ends.
 
+Class vs Object
+Class is a blueprint; Object is an instance of that class. ?
+
+
+
+njk.ho;o;j opp o
 session_start();
 $_SESSION['user'] = "Coder";
 echo $_SESSION['user'];
 
-
+ldmlpd[sgksd[pksdp klsdndsds knl;]]
 ?>
