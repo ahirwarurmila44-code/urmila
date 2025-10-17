@@ -25,3 +25,8 @@ echo $_SESSION['user'];
 
 ldmlpd[sgksd[pksdp klsdndsds knl;]]
 ?>
+
+
+Command	Purpose	Works With	Typical Use
+git merge	Combines two branches together locally	Local branches	Used when you want to merge code from another branch into your current branch
+git pull	Fetches and merges code from a remote repository	Remote and local	Used to update your local branch with the latest remote changes
