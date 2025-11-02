@@ -1,25 +1,58 @@
 <?php
 
-Difference Between var, let, and const in JavaScript
+Encapsulation in php oop ?
 
-var:
-Function-scoped,
-var is accessible outside the block.
-Can be Re-declarae and Re-assign 
+"How to protect your data in PHP classes 🛡️"
 
-let:
-Block-scoped ({ })
-exists only inside the block {} where it’s declared.
-Can be Re-assign, 
-But can not be Re-declare
+class Bank {
+  private $pin = 1234;
+  function showPin(){echo $this->pin;}
+}
 
-const:
-can not be Re-declare and Re-assign
+
+💬 Explain:
+Using private hides data from outside — that’s encapsulation!
 
 
 
 
 
+"Simple but powerful! Follow for more PHP interview boosters!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Static Methods
+
+🎥 Hook:
+"Why use static methods in PHP?"
+
+💻 Code:
+
+class Math {
+  static function add($a,$b){ return $a+$b; }
+}
+echo Math::add(2,3);
+
+
+💬 Explain:
+Static methods belong to the class — no need to create an object.
 
 
 
