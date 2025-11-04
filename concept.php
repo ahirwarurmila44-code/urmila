@@ -2,7 +2,7 @@
 
 Encapsulation in php oop ?
 
-"How to protect your data in PHP classes 🛡️"
+"How to protect your data in PHP classes"
 
 class Bank {
   private $pin = 1234;
@@ -71,12 +71,41 @@ $arr = explode(",", $str);
 
 
 
+
+
+
+
+
+
 What is implode() in PHP?
 
 Joins array elements into a string.
 
+Syntax
+implode(string $separator, array $array): string
+
+Example 1:
 $arr = ["PHP", "MySQL"];
 echo implode("-", $arr);
+
+Example 2:
+$fruits = ["apple", "banana", "grape"];
+$string = implode(", ", $fruits);
+
+Output 1:
+PHP-MySQL
+
+Output 2:
+apple, banana, grape
+
+
+
+
+
+
+
+
+
 
 
 
