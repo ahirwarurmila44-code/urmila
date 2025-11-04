@@ -1,5 +1,8 @@
 <?php
+How to fetch data from MySQL?
+$stmt = $conn->query("SELECT * FROM users");
 
+/////////
 Encapsulation in php oop ?
 
 "How to protect your data in PHP classes"
