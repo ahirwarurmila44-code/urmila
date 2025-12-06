@@ -1,4 +1,85 @@
 <?php
+// WHERE vs HAVING in SQL Query —Key Difference
+WHERE:
+Applies before GROUP BY(grouping).
+Filters individual rows.
+Cannot use aggregate functions(SUM, COUNT).
+Executes before GROUP BY
+
+HAVING:
+Applies after GROUP BY (grouping).
+Filters the result of GROUP BY.
+Can use aggregate functions.
+Executes after GROUP BY.
+
+Table:
+| id | employee | product | amount |
+| -- | -------- | ------- | ------ |
+| 1  | A        | Pen     | 200    |
+| 2  | A        | Book    | 300    |
+| 3  | A        | Bag     | 100    |
+| 4  | B        | Pen     | 400    |
+| 5  | B        | Book    | 150    |
+| 6  | C        | Pen     | 700    |
+
+Example 1: WHERE filters rows
+
+SELECT *
+FROM sales
+WHERE amount > 200;
+
+Output (filtered rows only)
+| id | employee | product | amount |
+| -- | -------- | ------- | ------ |
+| 2  | A        | Book    | 300    |
+| 4  | B        | Pen     | 400    |
+| 6  | C        | Pen     | 700    |
+
+WHERE only checks each row.
+Why WHERE cannot use aggregates?
+Because WHERE runs before grouping, 
+so SUM() is not ready yet.
+
+
+Example 2: HAVING filters groups
+SELECT employee, SUM(amount) AS total_sales
+FROM sales
+GROUP BY employee
+HAVING SUM(amount) > 500;
+
+Step 1 — GROUP BY Output (before HAVING)
+| employee | SUM(amount)           |
+| -------- | --------------------- |
+| A        | 200 + 300 + 100 = 600 |
+| B        | 400 + 150 = 550       |
+| C        | 700                   |
+
+Step 2 — Final correct output:
+| employee | total_sales |
+| -------- | ----------- |
+| A        | 600         |
+| B        | 550         |
+| C        | 700         |
+
+
+
+
+
+
+
+
+
+Q:argument vs parameter
+Q:for loop vs foreach loop in php
+Q:array vs object in php
+Q:or vs xor in php
+Q:!= vs <> in php
+Q:error vs exception  ? with example
+Q:array_merge vs array_combine in php
+Q:primitive and reference datatypes
+Q: null vs undefined value
+
+
 How to fetch data from MySQL?
 $stmt = $conn->query("SELECT * FROM users");
 
